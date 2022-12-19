@@ -1,4 +1,4 @@
-#include "Chat.h"
+ï»¿#include "Chat.h"
 #include "Message.h"
 #include "User.h"
 #include <vector>
@@ -17,7 +17,7 @@ void Chat::regIn()
 	std::string login;
 	std::string password;
 	std::string name;
-	std::cout << "Ââåäèòå ëîãèí: ";
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð»Ð¾Ð³Ð¸Ð½: ";
 	std::cin >> login;
 	std::cin.clear();
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -26,8 +26,8 @@ void Chat::regIn()
 		while (login == user.getLogin())
 		{
 			std::cout << std::endl;
-			std::cout << "Ëîãèí óæå ñóùåñòâóåò. Âûáåðèòå äåéñòâèå:" << std::endl << "1 - Ââåäèòå äðóãîé ëîãèí" << std::endl << "0 - Âûéòè èç ÷àòà" << std::endl;
-			std::cout << std::endl << "Âàøå äåéñòâèå: ";
+			std::cout << "Ð›Ð¾Ð³Ð¸Ð½ ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚. Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:" << std::endl << "1 - Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ñ€ÑƒÐ³Ð¾Ð¹ Ð»Ð¾Ð³Ð¸Ð½" << std::endl << "0 - Ð’Ñ‹Ð¹Ñ‚Ð¸ Ð¸Ð· Ñ‡Ð°Ñ‚Ð°" << std::endl;
+			std::cout << std::endl << "Ð’Ð°ÑˆÐµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ: ";
 			const char TRY = '1';
 			const char EXIT = '0';
 			std::string op;
@@ -43,28 +43,28 @@ void Chat::regIn()
 				switch (mapping[op])
 				{
 				case TRY:
-					std::cout << "Ââåäèòå ëîãèí: ";
+					std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð»Ð¾Ð³Ð¸Ð½: ";
 					std::cin >> login;
 					std::cin.clear();
 					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 					break;
 				case EXIT:
 					isChatWorking_ = false;
-					std::cout << "Ïðîùàéòå! " << std::endl;
+					std::cout << "ÐŸÑ€Ð¾Ñ‰Ð°Ð¹Ñ‚Ðµ! " << std::endl;
 					return;
 				default:
-					std::cout << "Ââåäåíà íåâåðíàÿ êîìàíäà. Âûáåðèòå äåéñòâèå:" << std::endl << "1 - Ââåäèòå äðóãîé ëîãèí" << std::endl << "0 - Âûéòè èç ÷àòà" << std::endl;
-					std::cout << std::endl << "Âàøå äåéñòâèå: ";
+					std::cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð° Ð½ÐµÐ²ÐµÑ€Ð½Ð°Ñ ÐºÐ¾Ð¼Ð°Ð½Ð´Ð°. Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:" << std::endl << "1 - Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ñ€ÑƒÐ³Ð¾Ð¹ Ð»Ð¾Ð³Ð¸Ð½" << std::endl << "0 - Ð’Ñ‹Ð¹Ñ‚Ð¸ Ð¸Ð· Ñ‡Ð°Ñ‚Ð°" << std::endl;
+					std::cout << std::endl << "Ð’Ð°ÑˆÐµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ: ";
 					break;
 				}
 			}
 		}
 	}
-	std::cout << "Ââåäèòå ïàðîëü: ";
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ: ";
 	std::cin >> password;
 	std::cin.clear();
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-	std::cout << "Ââåäèòå èìÿ: ";
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ: ";
 	std::cin >> name;
 	std::cin.clear();
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -73,8 +73,8 @@ void Chat::regIn()
 		while (name == user.getName())
 		{
 			std::cout << std::endl;
-			std::cout << "Èìÿ óæå ñóùåñòâóåò. Âûáåðèòå äåéñòâèå:" << std::endl << "1 - Ââåäèòå äðóãîå èìÿ" << std::endl << "0 - Âûéòè èç ÷àòà" << std::endl;
-			std::cout << std::endl << "Âàøå äåéñòâèå: ";
+			std::cout << "Ð˜Ð¼Ñ ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚. Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:" << std::endl << "1 - Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ñ€ÑƒÐ³Ð¾Ðµ Ð¸Ð¼Ñ" << std::endl << "0 - Ð’Ñ‹Ð¹Ñ‚Ð¸ Ð¸Ð· Ñ‡Ð°Ñ‚Ð°" << std::endl;
+			std::cout << std::endl << "Ð’Ð°ÑˆÐµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ: ";
 			std::string op;
 			const char TRY = '1';
 			const char EXIT = '0';
@@ -90,7 +90,7 @@ void Chat::regIn()
 				switch (mapping[op])
 				{
 				case TRY:
-					std::cout << "Âåäèòå èìÿ: ";
+					std::cout << "Ð’ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ: ";
 					std::cin >> name;
 					std::cin.clear();
 					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -98,11 +98,11 @@ void Chat::regIn()
 				case EXIT:
 					isChatWorking_ = false;
 					std::cout << std::endl;
-					std::cout << "Ïðîùàéòå! " << std::endl;
+					std::cout << "ÐŸÑ€Ð¾Ñ‰Ð°Ð¹Ñ‚Ðµ! " << std::endl;
 					return;
 				default:
-					std::cout << "Èìÿ óæå ñóùåñòâóåò. Âûáåðèòå äåéñòâèå:" << std::endl << "1 - Ââåäèòå äðóãîå èìÿ" << std::endl << "0 - Âûéòè èç ÷àòà" << std::endl;
-					std::cout << std::endl << "Âàøå äåéñòâèå: ";
+					std::cout << "Ð˜Ð¼Ñ ÑƒÐ¶Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚. Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:" << std::endl << "1 - Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ñ€ÑƒÐ³Ð¾Ðµ Ð¸Ð¼Ñ" << std::endl << "0 - Ð’Ñ‹Ð¹Ñ‚Ð¸ Ð¸Ð· Ñ‡Ð°Ñ‚Ð°" << std::endl;
+					std::cout << std::endl << "Ð’Ð°ÑˆÐµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ: ";
 					break;
 				}
 			}
@@ -112,14 +112,14 @@ void Chat::regIn()
 	users_.push_back(user);
 	currUser_ = std::make_shared<User>(user);
 	std::cout << std::endl;
-	std::cout << "Ïðèâåò " << currUser_->getName() << "! Äîáðî ïîæàëîâàòü â ÷àò! " << std::endl;
+	std::cout << "ÐŸÑ€Ð¸Ð²ÐµÑ‚ " << currUser_->getName() << "! Ð”Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ Ð² Ñ‡Ð°Ñ‚! " << std::endl;
 }
 void Chat::logIn()
 {
 	std::string login;
 	std::string password;
 	std::string op;
-	std::cout << "Ââåäèòå ëîãèí: ";
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð»Ð¾Ð³Ð¸Ð½: ";
 	std::cin >> login;
 	std::cin.clear();
 	std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -132,8 +132,8 @@ void Chat::logIn()
 			const char REGIN = '2';
 			const char EXIT = '0';
 			std::cout << std::endl;
-			std::cout << "Ïîëüçîâàòåëÿ ñ òàêèì ëîãèíîì íå ñóùåñòâóåò. Âûáåðèòå äåéñòâèå:" << std::endl << "1 - Ââåäèòå äðóãîå èìÿ" << std::endl << "0 - Âûéòè èç ÷àòà" << std::endl;
-			std::cout << std::endl << "Âàøå äåéñòâèå: ";
+			std::cout << "ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ Ñ Ñ‚Ð°ÐºÐ¸Ð¼ Ð»Ð¾Ð³Ð¸Ð½Ð¾Ð¼ Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚. Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:" << std::endl << "1 - Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ñ€ÑƒÐ³Ð¾Ðµ Ð¸Ð¼Ñ" << std::endl << "0 - Ð’Ñ‹Ð¹Ñ‚Ð¸ Ð¸Ð· Ñ‡Ð°Ñ‚Ð°" << std::endl;
+			std::cout << std::endl << "Ð’Ð°ÑˆÐµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ: ";
 			while (op != "1" && op != "2" && op != "0")
 			{
 				std::cin >> op;
@@ -155,11 +155,11 @@ void Chat::logIn()
 				case EXIT:
 					isChatWorking_ = false;
 					std::cout << std::endl;
-					std::cout << "Ïðîùàéòå! " << std::endl;
+					std::cout << "ÐŸÑ€Ð¾Ñ‰Ð°Ð¹Ñ‚Ðµ! " << std::endl;
 					return;
 				default:
-					std::cout << "Ââåäåíà íåâåðíàÿ êîìàíäà. Âûáåðèòå äåéñòâèå:" << std::endl << "1 - Ââåäèòå äðóãîé ëîãèí" << std::endl << "2 - Ðåãèñòðàöèÿ â ÷àòå" << std::endl << "0 - Âûéòè èç ÷àòà" << std::endl;
-					std::cout << std::endl << "Âàøå äåéñòâèå: ";
+					std::cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð° Ð½ÐµÐ²ÐµÑ€Ð½Ð°Ñ ÐºÐ¾Ð¼Ð°Ð½Ð´Ð°. Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:" << std::endl << "1 - Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ñ€ÑƒÐ³Ð¾Ð¹ Ð»Ð¾Ð³Ð¸Ð½" << std::endl << "2 - Ð ÐµÐ³Ð¸ÑÑ‚Ñ€Ð°Ñ†Ð¸Ñ Ð² Ñ‡Ð°Ñ‚Ðµ" << std::endl << "0 - Ð’Ñ‹Ð¹Ñ‚Ð¸ Ð¸Ð· Ñ‡Ð°Ñ‚Ð°" << std::endl;
+					std::cout << std::endl << "Ð’Ð°ÑˆÐµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ: ";
 					break;
 				}
 			}
@@ -167,15 +167,15 @@ void Chat::logIn()
 	}
 	else
 	{
-		std::cout << "Ââåäèòå ïàðîëü: ";
+		std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ: ";
 		std::cin >> password;
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 		std::cout << std::endl;
 		while (password != currUser_->getPassword())
 		{
-			std::cout << "Ïàðîëü íå âåðíûé. Âûáåðèòå äåéñòâèå:" << std::endl << "1 - Ââåäèòå äðóãîé ïàðîëü" << std::endl << "0 - Âûéòè èç ÷àòà" << std::endl;
-			std::cout << std::endl << "Âàøå äåéñòâèå: ";
+			std::cout << "ÐŸÐ°Ñ€Ð¾Ð»ÑŒ Ð½Ðµ Ð²ÐµÑ€Ð½Ñ‹Ð¹. Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:" << std::endl << "1 - Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ñ€ÑƒÐ³Ð¾Ð¹ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ" << std::endl << "0 - Ð’Ñ‹Ð¹Ñ‚Ð¸ Ð¸Ð· Ñ‡Ð°Ñ‚Ð°" << std::endl;
+			std::cout << std::endl << "Ð’Ð°ÑˆÐµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ: ";
 			std::string op;
 			const char TRY = '1';
 			const char EXIT = '0';
@@ -191,7 +191,7 @@ void Chat::logIn()
 				switch (mapping[op])
 				{
 				case TRY:
-					std::cout << "Ââåäèòå ïàðîëü: ";
+					std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¿Ð°Ñ€Ð¾Ð»ÑŒ: ";
 					std::cin >> password;
 					std::cin.clear();
 					std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -200,23 +200,23 @@ void Chat::logIn()
 				case EXIT:
 					isChatWorking_ = false;
 					std::cout << std::endl;
-					std::cout << "Ïðîùàéòå! " << std::endl;
+					std::cout << "ÐŸÑ€Ð¾Ñ‰Ð°Ð¹Ñ‚Ðµ! " << std::endl;
 					return;
 				default:
-					std::cout << "Ââåäåíà íåâåðíàÿ êîìàíäà. Âûáåðèòå äåéñòâèå:" << std::endl << "1 - Ââåäèòå äðóãîé ëîãèí" << std::endl << "0 - Âûéòè èç ÷àòà" << std::endl;
-					std::cout << std::endl << "Âàøå äåéñòâèå: ";
+					std::cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð° Ð½ÐµÐ²ÐµÑ€Ð½Ð°Ñ ÐºÐ¾Ð¼Ð°Ð½Ð´Ð°. Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:" << std::endl << "1 - Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð´Ñ€ÑƒÐ³Ð¾Ð¹ Ð»Ð¾Ð³Ð¸Ð½" << std::endl << "0 - Ð’Ñ‹Ð¹Ñ‚Ð¸ Ð¸Ð· Ñ‡Ð°Ñ‚Ð°" << std::endl;
+					std::cout << std::endl << "Ð’Ð°ÑˆÐµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ: ";
 					break;
 				}
 			}
 		}
-		std::cout << "Ïðèâåò " << currUser_->getName() << "! Äîáðî ïîæàëîâàòü â ÷àò! " << std::endl << std::endl;
+		std::cout << "ÐŸÑ€Ð¸Ð²ÐµÑ‚ " << currUser_->getName() << "! Ð”Ð¾Ð±Ñ€Ð¾ Ð¿Ð¾Ð¶Ð°Ð»Ð¾Ð²Ð°Ñ‚ÑŒ Ð² Ñ‡Ð°Ñ‚! " << std::endl << std::endl;
 	}
 }
 void Chat::chatOptions()
 {
 	std::string op;
-	std::cout << std::endl << "Âûáåðèòå äåéñòâèå:" << std::endl << "1 - Ðåãèñòðàöèÿ â ÷àòå" << std::endl << "2 - Âõîä â ÷àò" << std::endl << "0 - Âûõîä" << std::endl;
-	std::cout << std::endl << "Âàøå äåéñòâèå: ";
+	std::cout << std::endl << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:" << std::endl << "1 - Ð ÐµÐ³Ð¸ÑÑ‚Ñ€Ð°Ñ†Ð¸Ñ Ð² Ñ‡Ð°Ñ‚Ðµ" << std::endl << "2 - Ð’Ñ…Ð¾Ð´ Ð² Ñ‡Ð°Ñ‚" << std::endl << "0 - Ð’Ñ‹Ñ…Ð¾Ð´" << std::endl;
+	std::cout << std::endl << "Ð’Ð°ÑˆÐµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ: ";
 	const char REGIN = '1';
 	const char LOGIN = '2';
 	const char EXIT = '0';
@@ -239,12 +239,12 @@ void Chat::chatOptions()
 			logIn();
 			break;
 		case EXIT:
-			std::cout << "Ïðîùàéòå! " << std::endl;
+			std::cout << "ÐŸÑ€Ð¾Ñ‰Ð°Ð¹Ñ‚Ðµ! " << std::endl;
 			isChatWorking_ = false;
 			return;
 		default:
-			std::cout << "Ââåäåíà íåâåðíàÿ êîìàíäà. Âûáåðèòå äåéñòâèå:" << std::endl << "1 - Ðåãèñòðàöèÿ â ÷àòå" << std::endl << "2 - Âõîä â ÷àò" << std::endl << "0 - Âûõîä" << std::endl;
-			std::cout << std::endl << "Âàøå äåéñòâèå: ";
+			std::cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð° Ð½ÐµÐ²ÐµÑ€Ð½Ð°Ñ ÐºÐ¾Ð¼Ð°Ð½Ð´Ð°. Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:" << std::endl << "1 - Ð ÐµÐ³Ð¸ÑÑ‚Ñ€Ð°Ñ†Ð¸Ñ Ð² Ñ‡Ð°Ñ‚Ðµ" << std::endl << "2 - Ð’Ñ…Ð¾Ð´ Ð² Ñ‡Ð°Ñ‚" << std::endl << "0 - Ð’Ñ‹Ñ…Ð¾Ð´" << std::endl;
+			std::cout << std::endl << "Ð’Ð°ÑˆÐµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ: ";
 			break;
 		}
 	}
@@ -257,8 +257,8 @@ void Chat::userOptions()
 	const char LOGOUT = '0';
 	while (currUser_)
 	{
-		std::cout << std::endl << "Âûáåðèòå äåéñòâèå:" << std::endl << "1 - Íàïèñàòü ñîîáùåíèå" << std::endl << "2 - Ïîêàçàòü âõîäÿùèå ñîîáùåíèÿ" << std::endl << "0 - Âûéòè èç ÷àòà" << std::endl;
-		std::cout << std::endl << "Âàøå äåéñòâèå: ";
+		std::cout << std::endl << "Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:" << std::endl << "1 - ÐÐ°Ð¿Ð¸ÑÐ°Ñ‚ÑŒ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ðµ" << std::endl << "2 - ÐŸÐ¾ÐºÐ°Ð·Ð°Ñ‚ÑŒ Ð²Ñ…Ð¾Ð´ÑÑ‰Ð¸Ðµ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ñ" << std::endl << "0 - Ð’Ñ‹Ð¹Ñ‚Ð¸ Ð¸Ð· Ñ‡Ð°Ñ‚Ð°" << std::endl;
+		std::cout << std::endl << "Ð’Ð°ÑˆÐµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ: ";
 		std::string op;
 		while (op != "1" && op != "2" && op != "0")
 		{
@@ -279,12 +279,12 @@ void Chat::userOptions()
 				showMessages();
 				break;
 			case LOGOUT:
-				std::cout << currUser_->getName() << " ïîêèíóë(à) ÷àò! " << std::endl;
+				std::cout << currUser_->getName() << " Ð¿Ð¾ÐºÐ¸Ð½ÑƒÐ»(Ð°) Ñ‡Ð°Ñ‚! " << std::endl;
 				currUser_ = nullptr;
 				break;
 			default:
-				std::cout << "Ââåäåíà íåâåðíàÿ êîìàíäà. Âûáåðèòå äåéñòâèå:" << std::endl << "1 - Íàïèñàòü ñîîáùåíèå" << std::endl << "2 - Ïîêàçàòü âõîäÿùèå ñîîáùåíèÿ" << std::endl << "0 - Âûéòè èç ÷àòà" << std::endl;
-				std::cout << std::endl << "Âàøå äåéñòâèå: ";
+				std::cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð° Ð½ÐµÐ²ÐµÑ€Ð½Ð°Ñ ÐºÐ¾Ð¼Ð°Ð½Ð´Ð°. Ð’Ñ‹Ð±ÐµÑ€Ð¸Ñ‚Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ:" << std::endl << "1 - ÐÐ°Ð¿Ð¸ÑÐ°Ñ‚ÑŒ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ðµ" << std::endl << "2 - ÐŸÐ¾ÐºÐ°Ð·Ð°Ñ‚ÑŒ Ð²Ñ…Ð¾Ð´ÑÑ‰Ð¸Ðµ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ñ" << std::endl << "0 - Ð’Ñ‹Ð¹Ñ‚Ð¸ Ð¸Ð· Ñ‡Ð°Ñ‚Ð°" << std::endl;
+				std::cout << std::endl << "Ð’Ð°ÑˆÐµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ: ";
 				break;
 			}
 		}
@@ -294,32 +294,32 @@ void Chat::writeMessage()
 {
 	std::string text;
 	double i = 1, userNum = 1;
-	std::cout << "Òåêñò ñîîáùåíèÿ: ";
+	std::cout << "Ð¢ÐµÐºÑÑ‚ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ñ: ";
 	std::cout << std::endl;
 	std::getline(std::cin, text);
 	std::cout << std::endl;
-	std::cout << "Êîìó àäðåñîâàòü ñîîáùåíèå? ";
+	std::cout << "ÐšÐ¾Ð¼Ñƒ Ð°Ð´Ñ€ÐµÑÐ¾Ð²Ð°Ñ‚ÑŒ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ðµ? ";
 	std::cout << std::endl;
 	for (User& user : users_)
 	{
 		std::cout << user.getName() << " - " << i << std::endl;
 		i++;
 	}
-	std::cout << "Â îáùåì ÷àòå - " << i << std::endl;
-	std::cout << "Ââåäèòå íîìåð: ";
+	std::cout << "Ð’ Ð¾Ð±Ñ‰ÐµÐ¼ Ñ‡Ð°Ñ‚Ðµ - " << i << std::endl;
+	std::cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð½Ð¾Ð¼ÐµÑ€: ";
 	while (!(std::cin >> userNum))
 	{
 		std::cout << std::endl;
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-		std::cout << "Ââåäåíî íåâåðíîå ÷èñëî! Ïîïðîáóéòå çàíîâî!" << std::endl;
-		std::cout << "Ïîëüçîâàòåëü: ";
+		std::cout << "Ð’Ð²ÐµÐ´ÐµÐ½Ð¾ Ð½ÐµÐ²ÐµÑ€Ð½Ð¾Ðµ Ñ‡Ð¸ÑÐ»Ð¾! ÐŸÐ¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ Ð·Ð°Ð½Ð¾Ð²Ð¾!" << std::endl;
+		std::cout << "ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒ: ";
 	}
 	std::cout << std::endl;
 	while (!userNum || userNum > i)
 	{
-		std::cout << "Ïîëüçîâàòåëÿ ñ òàêèì íîìåðîâ íå ñóùåñòâóåò! Ïîïðîáóéòå çàíîâî!" << std::endl;
-		std::cout << "Ïîëüçîâàòåëü: ";
+		std::cout << "ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»Ñ Ñ Ñ‚Ð°ÐºÐ¸Ð¼ Ð½Ð¾Ð¼ÐµÑ€Ð¾Ð² Ð½Ðµ ÑÑƒÑ‰ÐµÑÑ‚Ð²ÑƒÐµÑ‚! ÐŸÐ¾Ð¿Ñ€Ð¾Ð±ÑƒÐ¹Ñ‚Ðµ Ð·Ð°Ð½Ð¾Ð²Ð¾!" << std::endl;
+		std::cout << "ÐŸÐ¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŒ: ";
 		std::cin >> userNum;
 		std::cin.clear();
 		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
@@ -332,13 +332,13 @@ void Chat::writeMessage()
 			Message message = Message(currUser_->getName(), user.getName(), text);
 			messages_.push_back(message);
 		}
-		std::cout << "Ñîîáùåíèå îò " << currUser_->getName() << " â îáùèé ÷àò..." << std::endl;
+		std::cout << "Ð¡Ð¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ðµ Ð¾Ñ‚ " << currUser_->getName() << " Ð² Ð¾Ð±Ñ‰Ð¸Ð¹ Ñ‡Ð°Ñ‚..." << std::endl;
 	}
 	else if (userNum > 0 && userNum < i)
 	{
 		Message message = Message(currUser_->getName(), users_.at(userNum - 1).getName(), text);
 		messages_.push_back(message);
-		std::cout << "Ëè÷íîå ñîîáùåíèå îò " << currUser_->getName() << " ïîëüçîâàòåëþ " << users_.at(userNum - 1).getName() << "..." << std::endl;
+		std::cout << "Ð›Ð¸Ñ‡Ð½Ð¾Ðµ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ðµ Ð¾Ñ‚ " << currUser_->getName() << " Ð¿Ð¾Ð»ÑŒÐ·Ð¾Ð²Ð°Ñ‚ÐµÐ»ÑŽ " << users_.at(userNum - 1).getName() << "..." << std::endl;
 	}
 }
 void Chat::showMessages()
@@ -349,7 +349,7 @@ void Chat::showMessages()
 		if (currUser_->getName() == message.getReceiver())
 		{
 			count++;
-			std::cout << "Âû ïîëó÷èëè ñîîáùåíèå îò " << message.getSender() << ": " << message.getMessage() << std::endl;
+			std::cout << "Ð’Ñ‹ Ð¿Ð¾Ð»ÑƒÑ‡Ð¸Ð»Ð¸ ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ðµ Ð¾Ñ‚ " << message.getSender() << ": " << message.getMessage() << std::endl;
 		}
 	}
 	if (count != 0)
@@ -358,7 +358,7 @@ void Chat::showMessages()
 	}
 	if (count == 0)
 	{
-		std::cout << "Ó âàñ íåò íåïðî÷èòàííûõ ñîîáùåíèé..." << std::endl;
+		std::cout << "Ð£ Ð²Ð°Ñ Ð½ÐµÑ‚ Ð½ÐµÐ¿Ñ€Ð¾Ñ‡Ð¸Ñ‚Ð°Ð½Ð½Ñ‹Ñ… ÑÐ¾Ð¾Ð±Ñ‰ÐµÐ½Ð¸Ð¹..." << std::endl;
 	}
 }
 std::shared_ptr<User> Chat::getUserByName(const std::string& name) const
